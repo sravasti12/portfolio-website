@@ -1,126 +1,95 @@
-/* Pink Girly Theme Basics */
+/* Reset and base styling */
 body {
-  background-color: #ffe6f0; /* light pink */
-  color: #4b004b; /* dark purple-pink */
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f5; /* soft pink */
+  color: #333;
 }
 
-/* Header & Nav */
+/* Header */
 header {
-  background-color: #ff69b4; /* hot pink */
-  padding: 1rem;
+  background-color: #e75480; /* rose pink */
+  color: #fff;
+  padding: 1.5rem;
   text-align: center;
-  position: relative;
 }
 
+/* Navigation */
 nav {
-  position: relative;
+  margin-top: 1rem;
 }
-
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-  user-select: none;
-}
-
 .nav-links {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
-
 .nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav-links li a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive: Hamburger Menu */
-
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #ff69b4;
-    position: absolute;
-    top: 3.5rem;
-    left: 0;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .nav-links li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-}
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* makes the image round */
-  object-fit: cover;  /* crops image nicely */
-  border: 3px solid #ff69b4; /* pink border */
-  display: block;
-  margin: 1rem auto;
-}
-html {
-  scroll-behavior: smooth;
-}
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 700px;
+/* Sections */
+section {
+  padding: 2rem;
+  max-width: 1000px;
   margin: auto;
 }
 
-.project-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: #ff1493; /* bright pink */
-}
-
-.project-card p {
-  font-style: italic;
-  color: #c71585;
-  margin-top: 0;
+/* Profile Image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.project-card ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-  color: #555;
+/* Project Section */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-card {
+  background-color: #ffeef8; /* soft project card background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 5px solid #e75480;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-.project-card ul li {
-  margin-bottom: 0.6rem;
+/* Contact Section */
+#contact a {
+  color: #e75480;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+}
