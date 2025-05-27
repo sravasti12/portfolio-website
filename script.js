@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const yearSpan = document.createElement('span');
-  yearSpan.textContent = `© ${new Date().getFullYear()} Sravasti`;
-  document.querySelector('footer').appendChild(yearSpan);
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
 });

@@ -1,48 +1,71 @@
+/* Pink Girly Theme Basics */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+  background-color: #ffe6f0; /* light pink */
+  color: #4b004b; /* dark purple-pink */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
 }
 
+/* Header & Nav */
 header {
-  background: #333;
-  color: white;
-  padding: 2rem 0;
+  background-color: #ff69b4; /* hot pink */
+  padding: 1rem;
   text-align: center;
+  position: relative;
 }
 
-nav a {
-  color: #ff9800;
-  margin: 0 1rem;
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.nav-links li a:hover {
   text-decoration: underline;
 }
 
-section {
-  background: white;
-  margin: 2rem auto;
-  padding: 2rem;
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+/* Responsive: Hamburger Menu */
 
-h2 {
-  color: #444;
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ff69b4;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
 }
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
