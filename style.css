@@ -69,3 +69,58 @@ nav {
     text-align: center;
   }
 }
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* makes the image round */
+  object-fit: cover;  /* crops image nicely */
+  border: 3px solid #ff69b4; /* pink border */
+  display: block;
+  margin: 1rem auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #ff1493; /* bright pink */
+}
+
+.project-card p {
+  font-style: italic;
+  color: #c71585;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.project-card ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  color: #555;
+}
+
+.project-card ul li {
+  margin-bottom: 0.6rem;
+}
+
